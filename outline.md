@@ -4,6 +4,7 @@
   - Variedades
   - Esquemas
 - Categorias
+- Geometria conmutativa
 - Geometria tropical
 - Variedades toricas
 - Monoides
