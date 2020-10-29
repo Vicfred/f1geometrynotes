@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{mathrsfs}
+\date{\today}
+\author{C. E. Garay}
+\title{On the philosophy of commutative algebraic geometry}
+\begin{document}
+\maketitle
+\section{Introduction}
+\subsection{Some philosophical aspects}
+{\bf Modern conception of Commutative Algebraic Geometry.} Nowadays, it is not anymore {\it the study of sets (locally) described as zero sets of polynomials with coefficients in some commutative ring with unit}, but it needs to be understood as the interplay between algebra and geometry, or between geometry and algebra, depending on which subject you like the most.  Two easily identifiable  goals of this are 
+\begin{enumerate}
+\item to use this interplay as a bridge to advance our knowledge of the concerned objects, by adding flexibility.
+\item in the non-affine case, to use geometric objects to amalgamate or globalize algebraic structures.
+\end{enumerate}
+\medskip
+
+\par\noindent
+{\bf How to do Algebraic Geometry. }The construction of a meaningful commutative algebro-geometric theory consists basically in two steps:
+
+\begin{enumerate}
+\item The definition of the building blocks of the theory, known as affine spaces\footnote{Sometimes called {\it affinoid} to avoid confusion with the historic use of the term {\it affine}, and also to recover the historic use of this term by J. Tate.}.
+\item A mechanism to glue together these building blocks to construct non-affine spaces.
+\end{enumerate}
+
+
+\par\noindent
+{\bf Affine spaces.} We need:
+\begin{enumerate}
+\item An identification of algebra and geometry in the form  of an equivalence of categories 
+\begin{equation}
+\label{identification}
+\mathbb{V}:\mathfrak{A}\rightleftarrows\mathfrak{S}:\mathbb{A}
+\end{equation}
+where 
+\begin{enumerate}
+\item $\mathfrak{A}$ represents the algebra in the form of a category of commutative algebraic structures, and $\mathfrak{S}$ represents the geometry in the form of a category of geometric objects, or spaces. More on this later.
+\item $\mathbb{V}$ is a visualization functor, and $\mathbb{A}$ is an algebrization functor.
+\end{enumerate}
+\item Local-to-global structure on the objects of $\mathfrak{S}$ in the form of the possibility to define (at least) one sheaf $\mathcal{O}_X$ with values in $\mathfrak{A}$ for every object $X$ of  $\mathfrak{S}$.
+\end{enumerate}
+The affine space would be in principle the pair $(X, \mathcal{O}_X)$, and if the objects $X$ of $\mathfrak{S}$ and $R$ of $\mathfrak{A}$ are identified under the relation \eqref{identification}, then we have that  $X=\mathbb{V}(R)$ is the {\it visualization} of $R$ and that $R=\mathbb{A}(X)$ is the algebrization of $X$. Of course the role of the sheaf $\mathcal{O}_X$ is to realize $R=\mathbb{A}(X)$ as the algebraic structure controlling allowable maps ({\it regular})  defined on the whole $X$, i.e. 
+\begin{equation}
+R=\mathcal{O}_X(X).
+\end{equation}
+If the story  ends here, then we have an affine algebro-geometric theory, which can also be useful.
+
+Although the concept of algebraic structure is well-delimited\footnote{An algebraic structure is a set endowed with a finite number of {\it operations}.}, the concept of geometric object is not. It may be possible that asking for a nice  space\footnote{Non-trivial!, since in principle one can't do geometry on a trivial space.} is very restrictive. The first option would be a topological space, where separation axioms give us two options:
+\begin{enumerate}
+\item Hausdorff spaces (e.g. topological or differentiable manifolds),
+\item Non-Hausdorff spaces (e.g. spectra of rings).
+\end{enumerate}
+
+We may even drift away from the traditional notion of topological space to the more abstract notion of {\it site} (see Appendix \ref{Appendix_Categories}), which is a pair $(\mathfrak{C},\mathcal{T})$ consisting of a category $\mathfrak{C}$ together with a Grothendieck topology $\mathcal{T}$ defined on it (e.g. the \'etale site of a scheme, or Tate rigid analytic spaces). 
+
+\medskip
+{\bf A mechanism to glue together these building blocks to construct non-affine spaces. }Let $(\mathfrak{A}\mathfrak{S})-\text{Sp}$ be the set of pairs $(X,\mathcal{O}_X)$ consisting of a space $X$ together with a sheaf $\mathcal{O}_X$ with values in $\mathfrak{A}$. We say that $(X,\mathcal{O}_X)$ is not affine if it is not of the form $\mathbb{V}(R)$ for $R\in\mathfrak{A}$.
+
+\medskip
+Suppose that there exists a non-affine pair  $(X,\mathcal{O}_X)$  with the following properties: 
+
+\begin{enumerate}
+\item there are $U_1,U_2\subset X$ open sets such that $(U_1\cup U_2,\mathcal{O}_X|_{U_1\cup U_2})$ is not affine, and $U_1\cap U_2\neq\emptyset$,
+\item there exists $R_i\in \mathfrak{A}$ such that $\mathbb{V}(R_i)=(U_i,\mathcal{O}_X|_{U_i})$.
+\end{enumerate}
+
+then one should be able to construct a pair $(U,\mathcal{O}_U)\in (\mathfrak{A}\mathfrak{S})-\text{Sp}$   such that $(U,\mathcal{O}_U)$ is {\it isomorphic} to $(U_1\cup U_2,\mathcal{O}_X|_{U_1\cup U_2})$.
+ 
+
+ 
+\textbf{Example (Schemes). } The best  way to go from {\it algebra} to {\it geometry} is still the theory of schemes. This has been extremely fruitful because the category $\mathfrak{S}$ch of schemes can be constructed locally from the category $\mathfrak{R}$ing of rings. 
+
+\textbf{Example (Rigid Spaces). }
+
+\subsection{Semigroups and friends}
+
+We are going to work with commutative pointed monoids, namely tuples $M=(M,\times,1,0)$. First one tries to study of much of the  commutative algebra remains valid in monoids.
+
+The most important example is $\mathbb{N}_*=\mathbb{N}\coprod\{-\infty\}$.We have that logarithm function induces an isomorphism between  $\mathbb{F}_1[x]$ and $\mathbb{N}_*$.
+
+Details about the category of monoids $\text{Mon}_*$, in particular it has an initial object $\mathbb{F}_1=\{0,1\}$. The category has all limits and colimits.
+\subsection{Ideals and congruences}
+We also recover the classical concept of ideal as well as quotients, which corresponds to collapsing the ideal. 
+
+We need to study the concept of congruences, which are equivalence relations $R\subset M\times M$ which are closed under the direct product. 
+
+Maybe  study the lattice (?) of congruences, 
+
+{\bf Homework. }Explore the concepts of congruence and ideal in monoids. Check the first chapter of \cite{AO}.
+
+ The maps between ideals and congruences are very important. The congruence associated to an ideal $I$ is generated by $\{(a,0)\::\:a\in I\}$ (this assignment is injective) and the ideal associated to the congruence $R$ is $\{a\in M\::\:(a,0)\in R\}$, and this is not injective. In rings these two concepts are the same.
+ 
+ The classical example of why this category is {\it bad} is the projection $\mathbb{N}_*\xrightarrow{}\mathbb{C}_{n,*}$, which is a non-injective map with trivial kernel.
+ 
+ We can define prime and maximal ideals, in fact $M-M^*$ is the maximal ideal of $M$, and an ideal is prime if $M-I$ is multiplicatively closed.
+ 
+ Localization works as usual (!) for multiplicatively closed sets $S\subset M$, and the properties of the resulting map $M\xrightarrow{}S^{-1}M$ depend on the properties of $M$:
+ 
+ in particular the concepts of integral and cancellative from the notes are different from those in \cite{AO}. The group completion is $M_{(0)}$ and the map   
+\appendix
+\section{Categories}
+\label{Appendix_Categories}
+Recall that if $\mathfrak{A},\mathfrak{B}$ are two categories, the category of $\mathfrak{B}$-valued presheaves on $\mathfrak{A}$ is just the functor category $\text{Fun}(\mathfrak{A},\mathfrak{B}^{op})$. 
+
+In order to be able to define sheaves, we need a topology on $\mathfrak{A}$. So, suppose that $\mathcal{S}=(\mathfrak{A},T)$ is a Grothendieck site, then we can define the category of $\mathfrak{B}$-valued sheaves on $\mathfrak{A}$ 
+
+We need to know that any topological space $X$ can be transformed into a site $(\text{Op}(X),\mathcal{T})$.
+\begin{thebibliography}{100}
+\bibitem{AO} A. Ogus, 
+\end{thebibliography}
+\end{document}
